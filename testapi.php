@@ -19,14 +19,14 @@ function index_get()
 	$id=$this->get('id');
 	if($id=='')
 		{
-			$komik=$this->db->get('datas_komik')->result();
+			$getdata=$this->db->get('datas_komik')->result();
 		}
 	else
 		{
 			$this->db->where('id',$id);
-			$komik=$this->db->get('datas_komik')->result();
+			$getdata=$this->db->get('datas_komik')->result();
 		}
-	$this->response($komik,200);
+	$this->response($getdata,200);
 }
 
 
